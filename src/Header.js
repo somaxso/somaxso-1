@@ -1,47 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { CustomOutsideClick } from "./hoc/CustomOutsideClick";
 
 const Header = () => {
   const [showSlider, setShowSlider] = useState(false);
   const sliderRef = useRef(null); // Ref for the slider
   const triggerRef = useRef(null); // Ref for the button
 
-  /* function ekfunction(e) {
-    setShowSlider(true);
-    const classList = Array.from(e.target.classList);
-    const className = classList.join(" ");
-    console.log(className);
-  } */
-
   const toggleSlider = (e) => {
-    console.log("click", showSlider);
     setShowSlider((prevSatate) => !prevSatate);
-    //setShowSlider(true)
-    /* if (e.currentTarget.className === "sidebar-trigger") {
-     setShowSlider(true);
-    } else {
-      setShowSlider(false);
-    } */
   };
-
-  const handleClickOutside = (e) => {
-    if (
-      sliderRef.current &&
-      !sliderRef.current.contains(e.target) && // Check if click is outside the slider
-      triggerRef.current &&
-      !triggerRef.current.contains(e.target) // Check if click is outside the button
-    ) {
-      setShowSlider(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [showSlider]);
 
   //function funname(){}
   //const funname=()=>{}
@@ -55,27 +23,71 @@ const Header = () => {
           <div className="container">
             <div className="navigation-inner">
               <div className="site-logo">
-                <a href="index.html">
+                <Link to="/">
                   <img src="assets/images/logo.png" alt="Somaxso" />
-                </a>
+                </Link>
               </div>
               <nav className="navigation-menu">
                 <ul className="main-menu">
                   <li>
-                    {/* <a href="index.html">Home</a> */}
-                    <Link to="/">Home</Link>
+                    <NavLink
+                      to="/"
+                      className={({ isActive }) =>
+                        isActive ? "active-link" : ""
+                      }
+                    >
+                      Home
+                    </NavLink>
                   </li>
                   <li>
-                    {/* <a href="about-us.html">Company</a> */}
-                    <Link to="/about">About Us</Link>
+                    <NavLink
+                      to="/about"
+                      className={({ isActive }) =>
+                        isActive ? "active-link" : ""
+                      }
+                    >
+                      About Us
+                    </NavLink>
                   </li>
                   <li>
-                    {/* <a href="services.html">Services</a> */}
-                    <Link to="/services">Services</Link>
+                    <NavLink
+                      to="/services"
+                      className={({ isActive }) =>
+                        isActive ? "active-link" : ""
+                      }
+                    >
+                      Services
+                    </NavLink>
                   </li>
                   <li>
-                    {/* <a href="contact.html">Contact</a> */}
-                    <Link to="/contact">Contact</Link>
+                    <NavLink
+                      to="/Projects"
+                      className={({ isActive }) =>
+                        isActive ? "active-link" : ""
+                      }
+                    >
+                      Projects
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/Blog"
+                      className={({ isActive }) =>
+                        isActive ? "active-link" : ""
+                      }
+                    >
+                      Blog
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/contact"
+                      className={({ isActive }) =>
+                        isActive ? "active-link" : ""
+                      }
+                    >
+                      Contact
+                    </NavLink>
                   </li>
                 </ul>
                 <button
@@ -112,41 +124,38 @@ const Header = () => {
           </div>
         </div>
       </header>
-      {/* slider */}
-      <div
-        id="sliderBox"
-        className="popup-sidebox"
-        ref={sliderRef}
-        style={{ display: showSlider ? "block" : "none" }}
-      >
-        <button className="sidebox-close">
-          <i className="las la-times" />
-        </button>
-        <div className="sidebox-content">
-          <div className="site-logo">
-            <a href="index.html">
-              <img src="assets/images/white-logo.svg" alt="logo" />
-            </a>
+
+      <CustomOutsideClick>
+        <div id="sliderBox" className="popup-sidebox" ref={sliderRef}>
+          <button className="sidebox-close">
+            <i className="las la-times" />
+          </button>
+          <div className="sidebox-content">
+            <div className="site-logo">
+              <Link to="/" onClick={(e)=>{e.preventDefault();}} style={{cursor:"default"}}>
+                <img src="assets/images/white-logo.svg" alt="logo" />
+              </Link>
+            </div>
+            <p>
+              Delivering premium technological software solutions for
+              businesses. From development to deployment, we handle it all.
+            </p>
+            <ul className="sidebox-list">
+              <li className="call">
+                <span>Call for Enquiry:</span>+91 8607638096
+              </li>
+              <li>
+                <span>You can find us at:</span>SCO-5, 2nd Floor, Sector-14,
+                Near Civil Hospital Hisar, 125001
+              </li>
+              <li>
+                <span>Email now:</span>
+                <a href="mailto:@gmail.com">Example mailto link</a>
+              </li>
+            </ul>
           </div>
-          <p>
-            Delivering premium technological software solutions for businesses.
-            From development to deployment, we handle it all.
-          </p>
-          <ul className="sidebox-list">
-            <li className="call">
-              <span>Call for Enquiry:</span>+91 8607638096
-            </li>
-            <li>
-              <span>You can find us at:</span>SCO-5, 2nd Floor, Sector-14, Near
-              Civil Hospital Hisar, 125001
-            </li>
-            <li>
-              <span>Email now:</span>
-              <a href="mailto:@gmail.com">Example mailto link</a>
-            </li>
-          </ul>
         </div>
-      </div>
+      </CustomOutsideClick>
     </React.Fragment>
   );
 };

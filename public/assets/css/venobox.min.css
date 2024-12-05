@@ -8,7 +8,9 @@
     --vbox-share-radius: 0
 }
 
-.vbox-overlay *, .vbox-overlay :after, .vbox-overlay :before {
+.vbox-overlay *,
+.vbox-overlay :after,
+.vbox-overlay :before {
     -webkit-backface-visibility: hidden;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -37,7 +39,8 @@
     z-index: 999999
 }
 
-.vbox-share, .vbox-title {
+.vbox-share,
+.vbox-title {
     line-height: 1;
     position: fixed;
     z-index: 98;
@@ -66,7 +69,11 @@
     border-radius: var(--vbox-share-radius)
 }
 
-.vbox-link-btn, button.vbox-link-btn, button.vbox-link-btn:active, button.vbox-link-btn:focus, button.vbox-link-btn:hover {
+.vbox-link-btn,
+button.vbox-link-btn,
+button.vbox-link-btn:active,
+button.vbox-link-btn:focus,
+button.vbox-link-btn:hover {
     border: none !important;
     background: 0 0 !important;
     box-shadow: none !important;
@@ -142,7 +149,8 @@
     bottom: 0
 }
 
-.vbox-next, .vbox-prev {
+.vbox-next,
+.vbox-prev {
     position: fixed;
     top: 50%;
     margin-top: -15px;
@@ -157,12 +165,14 @@
     transition: opacity .2s
 }
 
-.vbox-next:hover, .vbox-prev:hover {
+.vbox-next:hover,
+.vbox-prev:hover {
     color: #d2d2d2;
     opacity: 1
 }
 
-.vbox-next span, .vbox-prev span {
+.vbox-next span,
+.vbox-prev span {
     position: relative;
     width: 20px;
     height: 20px;
@@ -197,7 +207,8 @@
     right: 10px
 }
 
-.vbox-inline, .venoratio {
+.vbox-inline,
+.venoratio {
     position: relative;
     width: 100%;
     margin: 0 auto
@@ -233,7 +244,8 @@
     --vb-aspect-ratio: calc(9 / 21 * 100%)
 }
 
-.vbox-child.vbox-inline, .vbox-child.venoratio {
+.vbox-child.vbox-inline,
+.vbox-child.venoratio {
     max-width: 1400px
 }
 
@@ -499,7 +511,9 @@
 }
 
 @keyframes sk-chase-dot {
-    100%, 80% {
+
+    100%,
+    80% {
         transform: rotate(360deg)
     }
 }
@@ -509,7 +523,8 @@
         transform: scale(.4)
     }
 
-    0%, 100% {
+    0%,
+    100% {
         transform: scale(1)
     }
 }
@@ -537,11 +552,14 @@
 }
 
 @keyframes sk-bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(0)
     }
 
-    45%, 55% {
+    45%,
+    55% {
         transform: scale(1)
     }
 }
@@ -581,7 +599,10 @@
 }
 
 @keyframes sk-wave {
-    0%, 100%, 40% {
+
+    0%,
+    100%,
+    40% {
         transform: scaleY(.4)
     }
 
@@ -633,7 +654,10 @@
 }
 
 @keyframes sk-flow {
-    0%, 100%, 80% {
+
+    0%,
+    100%,
+    80% {
         transform: scale(.3)
     }
 
@@ -675,7 +699,9 @@
 }
 
 @keyframes sk-swing-dot {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(.2)
     }
 
@@ -797,7 +823,10 @@
 }
 
 @keyframes sk-circle {
-    0%, 100%, 80% {
+
+    0%,
+    100%,
+    80% {
         transform: scale(0)
     }
 
@@ -919,7 +948,10 @@
 }
 
 @keyframes sk-circle-fade {
-    0%, 100%, 39% {
+
+    0%,
+    100%,
+    39% {
         opacity: 0;
         transform: scale(.6)
     }
@@ -980,7 +1012,10 @@
 }
 
 @keyframes sk-grid {
-    0%, 100%, 70% {
+
+    0%,
+    100%,
+    70% {
         transform: scale3D(1, 1, 1)
     }
 
@@ -1041,17 +1076,21 @@
 }
 
 @keyframes sk-fold {
-    0%, 10% {
+
+    0%,
+    10% {
         transform: perspective(140px) rotateX(-180deg);
         opacity: 0
     }
 
-    25%, 75% {
+    25%,
+    75% {
         transform: perspective(140px) rotateX(0);
         opacity: 1
     }
 
-    100%, 90% {
+    100%,
+    90% {
         transform: perspective(140px) rotateY(180deg);
         opacity: 0
     }

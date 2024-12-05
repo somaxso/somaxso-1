@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Contact from "./Contact";
+import Projects from "./Projects";
+import Blog from "./Blog";
 import Services from "./Services";
 import AboutUs from "./AboutUs";
 const HomePage = () => {
@@ -33,11 +35,12 @@ const HomePage = () => {
             <div className="col-md-5 d-none d-md-block">
               <div className="brands-circle">
                 <div className="inner-icon">
-                  <i className="lab la-hubspot" />
+                  <i className=" fa-brands fa-react" />
+
                   <i className="fa-solid fa-hashtag" />
                 </div>
                 <div className="center-icon">
-                  <i className="lab la-earlybirds" />
+                  <i className="fa-regular fa-lightbulb"/>
                 </div>
                 <div className="outer-icon">
                   <i className="fa-solid fa-laptop-code"></i>
@@ -75,7 +78,7 @@ const HomePage = () => {
               >
                 <div className="slider-img">
                   <img
-                    src="assets/images/slider-3.jpg"
+                    src="assets/imgslider-3.jpg"
                     alt="img"
                     className="kenburns"
                     style={{ animationDuration: "12000ms" }}
@@ -387,6 +390,8 @@ const HomePage = () => {
 
       <AboutUs />
       <Services />
+      <Blog />
+      <Projects />
       <Contact />
     </>
   );

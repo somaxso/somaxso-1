@@ -1,5 +1,11 @@
 import React from "react"
+import { Link } from "react-router-dom";
+
 const Footer = () => {
+
+  function scrollToTop(){
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   return (
     <footer className="footer-wrapper">
       <div className="map-pattern light" />
@@ -8,7 +14,7 @@ const Footer = () => {
         <div className="row footer-widgets">
           <div className="col-lg-3 col-md-6 footer-widget sm-padding">
             <h3 className="widget-title">About Somaxso</h3>
-            <p>
+            <p className="para">
               We offer tailored IT coaching and consulting services designed to
               help you achieve your career goals and unleash your full
               potentail.
@@ -31,7 +37,7 @@ const Footer = () => {
           <div className="col-lg-3 offset-lg-1 col-md-6 footer-widget sm-padding">
             <h3 className="widget-title">Company</h3>
             <ul>
-              <li>
+              <li className="widget">
                 <a href="#">About Us</a>
               </li>
               <li>
@@ -50,7 +56,8 @@ const Footer = () => {
             <ul>
               <li>
                 SCO-5, 2nd Floor, Sector-14, <br />
-                Near Civil Hospital<br />
+                Near Civil Hospital
+                <br />
                 Hisar, 125001
               </li>
               <li>Mon-Sat:10.00 am to 7.00pm</li>
@@ -62,15 +69,15 @@ const Footer = () => {
           </div>
           <div className="col-lg-2 col-md-6 footer-widget sm-padding">
             <h3 className="widget-title">Have a project in your mind?</h3>
-            <a href="contact.html" className="contact-btn">
+            <Link to="/contact" className="contact-btn" onClick={scrollToTop}>
               Contact us
-            </a>
+            </Link>
           </div>
         </div>
         {/* /.footer-widgets */}
         <div className="footer-bottom">
           <div className="copyright-text">
-            © <span id="currentYear" /> Somaxso, All Rights Reserved. 
+            © <span id="currentYear" /> Somaxso, All Rights Reserved.
           </div>
           <ul>
             <li>
