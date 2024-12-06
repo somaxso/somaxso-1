@@ -150,7 +150,7 @@ const Header = () => {
               </li>
               <li>
                 <span>Email now:</span>
-                <a href="mailto:@gmail.com">Example mailto link</a>
+                <a href="info@somaxso.com">Example mailto link</a>
               </li>
             </ul>
           </div>

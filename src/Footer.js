@@ -63,7 +63,7 @@ const Footer = () => {
               <li>Mon-Sat:10.00 am to 7.00pm</li>
               <li>
                 +91 8607638096 <br />
-                www.somaxso.com
+                info@somaxso.com
               </li>
             </ul>
           </div>

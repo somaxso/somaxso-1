@@ -25,11 +25,11 @@ const Contact = () => {
                   </li>
                   <li>
                     <i className="las la-envelope-open" />
-                    www.somaxso.com
+                    info@somaxso.com
                   </li>
                   <li>
                     <i className="las la-phone-volume" />
-                    +91 8607638096 
+                    +91 8607638096
                   </li>
                 </ul>
               </div>
