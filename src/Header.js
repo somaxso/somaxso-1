@@ -145,12 +145,11 @@ const Header = () => {
                 <span>Call for Enquiry:</span>+91 8607638096
               </li>
               <li>
-                <span>You can find us at:</span>SCO-5, 2nd Floor, Sector-14,
-                Near Civil Hospital Hisar, 125001
+                <span>You can find us at:</span>SFF-8, Neelkanth Complex, Delhi Road, Hisar, Haryana 125001
               </li>
               <li>
                 <span>Email now:</span>
-                <a href="info@somaxso.com">Example mailto link</a>
+                <a href="info@somaxso.com">info@somaxso.com</a>
               </li>
             </ul>
           </div>

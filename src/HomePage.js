@@ -14,7 +14,7 @@ const HomePage = () => {
               <div className="hero-content">
                 <h3>
                   <i className="las la-bolt" />
-                  Trusted Tech Agency !
+                  Trusted AI Company !
                 </h3>
                 <h2>Innovative Ideas to Elevate Your Brand!</h2>
                 <p>
